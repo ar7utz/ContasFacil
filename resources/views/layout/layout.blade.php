@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('title')</title>
-    
-    @vite('resources/css/app.css', 'resources/js/app.js')
+
+    <title>@yield('title', config('app.name', 'Contas Fácil'))</title>
+
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
 
-<body>
+<body class="min-h-screen bg-[#edf0f4] text-slate-900 antialiased">
     @yield('content')
-    <h1>teste</h1>
 </body>
 
 </html>
