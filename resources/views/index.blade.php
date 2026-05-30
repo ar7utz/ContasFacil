@@ -1,24 +1,42 @@
 @extends('layout.layout')
 
-@section('title', 'Contas Fácil')
+@section('title', 'Página Inicial')
 
-@section ('content')
+@section('content')
+   <div class="min-h-screen bg-[url('../imagens/background/img2.png')] bg-cover p-3 md:p-6">
+      <div class="">
+         <!-- Navbar -->
+         <div class="navbar px-4 md:px-8 py-4">
+            <div class="flex-1">
+               <a class="text-offwhite text-2xl font-bold">
+                 Contas fácil
+               </a>
+            </div>
 
-<div class="fixed inset-0 z-9 bg-[url('../imagens/background/img2.png')] bg-cover bg-center bg-no-repeat"></div>
+            <div class="flex gap-2">
+               <a href="{{ route('login') }}">
+                  <button class="btn btn-primary rounded-full">
+                  Entrar
+                  </button>
+               </a>
+            </div>
+         </div>
 
-<section class="relative z-10 min-h-screen flex">
-   <div class="">
-      <h1 class="font-viga text-4xl font-bold text-white">
-         Contas Fácil
-      </h1>
-   </div>
-
-   <div class="">
-      <a href="{{ route('login') }}" class="font-viga btn btn-primary">
-         Entrar
-      </a>
-   </div>
-</section>
-
-
+         <!-- Hero -->
+         <section class="relative">
+            <div class="grid lg:grid-cols-2 items-center min-h-[700px]">
+               <!-- Texto -->
+               <div class="order-2 lg:order-1 px-6 md:px-12 py-10 lg:py-0 z-10">
+                  <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold leading-none text-primary">
+                  Seu aplicativo de contas
+                  </h1>
+                  {{-- <p class="mt-6 text-base md:text-lg text-base-content/70 max-w-md">
+                     With etail.me, anyone can earn their first dollar online.
+                     Just start with what you know. It's that easy.
+                  </p> --}}
+               </div> 
+            </div>
+         </section>
+      </div>
+    </div>
 @endsection

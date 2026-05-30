@@ -11,7 +11,7 @@
 
 </head>
 
-<body class="min-h-screen bg-[#edf0f4] text-slate-900 antialiased">
+<body class="min-h-screen bg-[#edf0f4] text-slate-900 antialiased font-viga">
     @yield('content')
 </body>
 
